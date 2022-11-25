@@ -1,0 +1,33 @@
+#variable
+view = True
+age = input("How old are you? ")
+rating = input("What is the rating of the movie? G, PG, PG-13, R: ")
+
+#setup
+if age >= 17 and rating == "R":
+    view = True
+elif age < 17 and rating == "R":
+    view = False
+elif age >= 13 and rating == "PG-13":
+    view = True
+elif age < 13 and rating == "PG-13":
+    view = False
+elif age < 10 and rating == "PG":
+    view = False
+elif age > 0 and rating == "G":
+    view = True
+else:
+    print("You did not enter the correct info")
+        
+
+print()
+
+#Results
+
+print("***RESULTS***")
+print("You entered an age of " + age + " and a rating of " + rating + " ")
+
+if view == True:
+      print("You are old enough to watch the movie")
+elif view == False:
+      print("You are NOT old enough the watch the movie")
